@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class LoginRequest extends DefaultRequest
+class StoreInstitutionRequest extends DefaultRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -20,8 +20,12 @@ class LoginRequest extends DefaultRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email'],
-            'password' => ['required', 'string']
+            'name' => ['required', 'string'],
+            'address' => ['required', 'string'],
+            'city' => ['required', 'string'],
+            'state' => ['required', 'string'],
+            'country' => ['required', 'string'],
+            'contact_email' => ['required', 'email'],
         ];
     }
 }

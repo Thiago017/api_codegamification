@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('enrollment');
+            $table->integer('institution_id');
             $table->integer('classroom', false, true);
             $table->string('email')->unique();
             $table->enum('role', ['student','teacher','director','admin']);

@@ -20,7 +20,7 @@ class UpdateInstitutionRequest extends DefaultRequest
     public function rules(): array
     {
         return [
-            'name' => ['string'],
+            'name' => ['string', 'unique:institutions'],
             'address' => ['string'],
             'city' => ['string'],
             'state' => ['string'],

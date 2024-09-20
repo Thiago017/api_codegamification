@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\DTOs\UserDTO;
+use App\DTOs\User\UserDTO;
 use App\Repositories\interfaces\UserRepositoryInterface;
 use App\Services\Interfaces\UserServiceInterface;
 

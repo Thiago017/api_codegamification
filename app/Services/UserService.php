@@ -14,8 +14,8 @@ final class UserService implements UserServiceInterface
     ) {}
 
     public function findAll() {
-        return $this->userRepository->findAll()->map(function($instituttion) {
-            return new UserDTO($instituttion);
+        return $this->userRepository->findAll()->map(function($institution) {
+            return new UserDTO($institution);
         });
     }
 

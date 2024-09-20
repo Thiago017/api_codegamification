@@ -1,17 +1,22 @@
 <?php
 
-namespace App\DTOs;
+namespace App\DTOs\User;
 
+use App\DTOs\DTO;
+use App\DTOs\Institution\InstitutionSummaryDTO;
 use App\Models\User;
 
 class UserDTO extends DTO
 {
+
     public string $name;
-    public string $address;
-    public string $city;
-    public string $state;
-    public string $country;
-    public string $contact_email;
+    public string $enrollment;
+    public int $institution_id;
+    public int $classroom;
+    public string $email;
+    public string $role;
+
+    public InstitutionSummaryDTO $institution;
 
     public function __construct(User $user) {
         $this->name = $user->name;
@@ -20,5 +25,7 @@ class UserDTO extends DTO
         $this->classroom = $user->classroom;
         $this->email = $user->email;
         $this->role = $user->role;
+
+        $this->institution = new InstitutionSummaryDTO($user->institution);
     }
 }

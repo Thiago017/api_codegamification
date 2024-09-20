@@ -1,10 +1,11 @@
 <?php
 
-namespace App\DTOs;
+namespace App\DTOs\Institution;
 
+use App\DTOs\DTO;
 use App\Models\Institution;
 
-class InstitutionDTO extends DTO
+class InstitutionSummaryDTO extends DTO
 {
     public string $name;
     public string $address;

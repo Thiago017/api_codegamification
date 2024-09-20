@@ -24,4 +24,8 @@ class Institution extends Model
         'country',
         'contact_email'
     ];
+
+    public function users() {
+        return $this->hasMany(User::class, 'institution_id', 'id');
+    }
 }

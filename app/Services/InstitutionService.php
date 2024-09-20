@@ -14,8 +14,8 @@ final class InstitutionService implements InstitutionServiceInterface
     ) {}
 
     public function findAll() {
-        return $this->institutionRepository->findAll()->map(function($instituttion) {
-            return new InstitutionDTO($instituttion);
+        return $this->institutionRepository->findAll()->map(function($institution) {
+            return new InstitutionDTO($institution);
         });
     }
 

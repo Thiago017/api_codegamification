@@ -34,7 +34,7 @@ final class UserService implements UserServiceInterface
         return new UserDTO($user);
     }
 
-    public function delete($id) {
+    public function delete(int $id) {
         return $this->userRepository->delete($id);
     }
 }

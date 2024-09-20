@@ -34,7 +34,7 @@ final class InstitutionService implements InstitutionServiceInterface
         return new InstitutionDTO($institution);
     }
 
-    public function delete($id) {
+    public function delete(int $id) {
         return $this->institutionRepository->delete($id);
     }
 }

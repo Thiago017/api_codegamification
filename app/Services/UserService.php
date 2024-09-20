@@ -14,24 +14,24 @@ final class UserService implements UserServiceInterface
     ) {}
 
     public function findAll() {
-        return $this->userRepository->findAll()->map(function($institution) {
-            return new UserDTO($institution);
+        return $this->userRepository->findAll()->map(function($user) {
+            return new UserDTO($user);
         });
     }
 
     public function findById(int $id) {
-        $institution = $this->userRepository->findById($id);
-        return new UserDTO($institution);
+        $user = $this->userRepository->findById($id);
+        return new UserDTO($user);
     }
 
     public function store(array $data) {
-        $institution = $this->userRepository->store($data);
-        return new UserDTO($institution);
+        $user = $this->userRepository->store($data);
+        return new UserDTO($user);
     }
 
     public function update(int $id, array $data) {
-        $institution = $this->userRepository->update($id, $data);
-        return new UserDTO($institution);
+        $user = $this->userRepository->update($id, $data);
+        return new UserDTO($user);
     }
 
     public function delete($id) {
